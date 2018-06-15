@@ -1,0 +1,30 @@
+<div class="mainForm serviceForm">
+	<form action="handler.php" method="post">
+		Service command: <input type="text" name="service_cmd" placeholder="KILL" size="48" /><br />
+		<input type="text" name="_type" value="service" hidden="true" />
+		<button>Send</button>
+	</form>
+</div>
+<br />
+<div class="mainForm cmdForm">
+	<form action="handler.php" method="post">
+		Command file: <input type="text" name="cmd_cmd" placeholder="C:\mpxplay.exe" size="48" /><br />
+		Command params: <input type="text" name="cmd_param" placeholder="-f0 C:\music.mp3" size="48" /><br />
+		Command display: <input type="text" name="cmd_display" placeholder="0" size="48" /><br />
+		<input type="text" name="_type" value="cmd" hidden="true" />
+		<button>Send</button>
+	</form>
+</div>
+<br />
+<div class="mainForm downloadForm">
+	<form action="handler.php" method="post">
+		Download source: <input type="text" name="download_url" placeholder="<?php echo($_SERVER['SERVER_ADDR'] ."/data/music_school.mp3"); ?>" size="48" /><br />
+		Download destination: <input type="text" name="download_dest" placeholder="C:\music.mp3" size="48" /><br />
+		<input type="text" name="_type" value="download" hidden="true" />
+		<button>Send</button>
+	</form>
+</div>
+<br />
+<div class="extraForm">
+	<a href="erase.php">Erase (reallocate) all files</a><br />
+</div>
